@@ -7,16 +7,17 @@ FacebookEndpoint
     $ cd FacebookEndpoint
     $ npm install
     $ npm start
+    $ npm test
 
-##Setting
-  $ streaming facebook feed of a user : inazrabuu@hotmail.com
-  $ visit https://developers.facebook.com/ setting By App streamFeed 
-  $ visit https://developers.facebook.com/tools/explorer/ Press Get Token
-  $ click Get User Access
-  $ Checklist user_post & email
-  $ click Get Access Token 
-  $ copy access token 
-  $ paste token in config/setting.js token
+ ## cSetting
+    $ streaming facebook feed of a user : inazrabuu@hotmail.com
+    $ visit https://developers.facebook.com/ setting By App streamFeed 
+    $ visit https://developers.facebook.com/tools/explorer/ Press Get Token
+    $ click Get User Access
+    $ Checklist user_post & email
+    $ click Get Access Token 
+    $ copy access token 
+    $ paste token in config/setting.js token
 
 ## Usage
 
