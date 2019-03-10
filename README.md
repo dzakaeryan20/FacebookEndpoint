@@ -9,14 +9,14 @@ FacebookEndpoint
     $ npm start
 
 ## Facebook Setting
-  $ Streaming facebook feed of a user : inazrabuu@hotmail.com
-  $ https://developers.facebook.com/ setting By App streamFeed 
-  $ https://developers.facebook.com/tools/explorer/ Press Get Token
-  $ Get User Access
+  $ streaming facebook feed of a user : inazrabuu@hotmail.com
+  $ visit https://developers.facebook.com/ setting By App streamFeed 
+  $ visit https://developers.facebook.com/tools/explorer/ Press Get Token
+  $ click Get User Access
   $ Checklist user_post & email
-  $ Click Get Access Token 
+  $ click Get Access Token 
   $ copy access token 
-  $ Paste token in config/setting.js token
+  $ paste token in config/setting.js token
 
 ## Usage
 
