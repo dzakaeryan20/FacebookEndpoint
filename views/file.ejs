@@ -1,0 +1,32 @@
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Facebook Account</h1>
+      <p class="lead text-muted">Hi, you must be <a href="#"><%= name.displayName %></a> </p>
+      <p>
+        <a href="/logout" class="btn btn-primary">Logout</a>
+      </p>
+    </div>
+</section>
+<div class="row">
+<% user.data.forEach(function(n){ %>
+<div class="card ">
+    <% if (n.picture){%>    
+    <img class="img-fluid" src="<%= n.picture %>" alt="Card image cap">
+    <%} %>
+    <% if (!n.picture){%>
+        <img class="img-fluid" src="/image/cpm.jpg" alt="Card image cap">
+    <%} %>    
+    <p class="card-text">
+        <a href="<%= n.link %>"><%= n.name %></a>
+    </p>
+    <!-- <div class="text-center">
+      <a href="/view/" class="btn btn-warning">Lihat</a>
+      <a href="/update" class="btn btn-secondary">Update</a>
+    </div> -->
+    
+</div>
+<% }) %>
+</div>
+<a href="/account/<%= page %>" class="btn btn-warning">Next</a>
+<a href="/account/<%= before %>" class="btn btn-secondary">Previous</a>
+
