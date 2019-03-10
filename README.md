@@ -8,7 +8,7 @@ FacebookEndpoint
     $ npm install
     $ npm start
 
-## Facebook Setting
+##Setting
   $ streaming facebook feed of a user : inazrabuu@hotmail.com
   $ visit https://developers.facebook.com/ setting By App streamFeed 
   $ visit https://developers.facebook.com/tools/explorer/ Press Get Token
