@@ -17,7 +17,7 @@ router.get('/auth/facebook/callback',
   });
 
 router.get('/account', ensureAuthenticated, function(req, res) {
-  // console.log(req.user)
+  console.log(req.user)
   const userfield = 'feed.limit(10){message,name,picture,link}' 
   const options={
         method:'GET',
@@ -33,6 +33,7 @@ router.get('/account', ensureAuthenticated, function(req, res) {
     const x=name.feed.paging.next.search('feed')
     const slice= name.feed.paging.next.slice(55)
 
+    console.log(x)
 
     res.render('account', {name:req.user, user:JSON.parse(body),page:slice });
     })
@@ -43,7 +44,7 @@ router.get('/account', ensureAuthenticated, function(req, res) {
 });
 router.get('/account/:page',ensureAuthenticated,function(req,res){
   
-    //console.log(req.params.page)
+    console.log(req.params.page)
     const options={
       method:'GET',
       uri:'https://graph.facebook.com/v3.2/'+req.user.id+"/feed?"+req.params.page,
@@ -57,7 +58,7 @@ router.get('/account/:page',ensureAuthenticated,function(req,res){
     const name = JSON.parse(body)
     const slice= name.paging.next.slice(55)
     const slice2= name.paging.previous.slice(55)
-    //console.log(name.paging.previous)
+    console.log(name.paging.previous)
     res.render('file', {name:req.user, user:JSON.parse(body),page:slice,before:slice2 });
     })
   
@@ -67,6 +68,9 @@ router.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
 });
+router.post('/accounts',function(req,res){
+   console.log("datanya"+req.body)
+})
 
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
