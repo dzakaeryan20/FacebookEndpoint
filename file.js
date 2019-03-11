@@ -1,2 +1,2 @@
-console.log("File javascript alll glen bjensah")
+console.log("File javascript")
 console.log9("Javascript all")
